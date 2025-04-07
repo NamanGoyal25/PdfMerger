@@ -1,14 +1,3 @@
-# import PyPDF2
-#
-# pdfiles = ["1.pdf", "2.pdf"]
-#
-# merger = PyPDF2.PdfMerger()
-# for files in pdfiles:
-#     pdfFile = open(files, "rb")
-#     pdfReader = PyPDF2.PdfReader(pdfFile)
-#     merger.append(pdfReader)
-# pdfFile.close()
-# merger.write("merged.pdf")
 from flask import Flask, render_template, request, send_file, jsonify
 import PyPDF2
 import os
