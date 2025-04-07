@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic PDF Merger</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Futuristic PDF Merger</h1>
+        <div class="upload-area" id="upload-area">
+            <p>Drag & Drop PDFs Here or Click to Upload</p>
+            <input type="file" id="pdf-input" name="pdfs" accept="application/pdf" multiple>
+        </div>
+        <div class="file-list" id="file-list">
+            <p>No PDFs Selected</p>
+        </div>
+        <button id="merge-btn" disabled>Merge PDFs</button>
+        <a id="download-link" href="#" style="display: none;">Download Merged PDF</a>
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Merging PDFs...</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
